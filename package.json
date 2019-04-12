@@ -1,0 +1,21 @@
+{
+  "name": "history_of_chernivtsi",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.11.0"
+  },
+  "description": "history_of_chernivtsi",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \\\"Error: no ../../../../Desktop/test specified\\\" && exit 1"
+  },
+  "author": "ImDen",
+  "license": "ISC"
+}
