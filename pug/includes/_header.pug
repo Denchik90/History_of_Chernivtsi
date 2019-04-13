@@ -1,24 +1,2 @@
-doctype
-html(lang='ru')
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1')
-        title История Черновцов
-        link(rel='stylesheet' href='css/main.css')
-        link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
-    body
-        mixin item(text)
-            li.menu__item
-                a(href='#').menu__link=text
-        header#menu.menu
-            a(href='#').logo
-                img(src='img/logo.png' alt='logo').logo__img
-            nav.menu__block
-                ul.menu__list
-                    +item('Генеральський будинок')
-                    +item('lorem ipsum')
-                    +item('lorem ipsum')
-                    +item('lorem ipsum')
-                    +item('lorem ipsum')
-                    +item('lorem ipsum')
+
         block content
