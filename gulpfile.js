@@ -38,7 +38,7 @@ gulp.task('views', function buildHTML() {
 
 gulp.task('sass:watch', function () {
     gulp.watch('./sass/*.sass', gulp.series('sass'));
-    gulp.watch('./pug/**/*.pug', gulp.series('views'));
+    gulp.watch('./**/*.pug', gulp.series('views'));
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 

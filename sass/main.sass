@@ -27,7 +27,6 @@ body
   display: block
   width: 70px
   margin: 15px 15px 15px auto
-
   &__img
     width: 100%
 .menu
@@ -60,11 +59,11 @@ body
     border-bottom: 1px solid $text
     padding: 15px
   &__head
-    font-size: 38px
+    font-size: 29px
     line-height: 36px
   &__description
     font-size: 16px
-    margin: 15px
+    margin: 10px
   &__period
     text-align: right
     margin-right: 15px
@@ -83,4 +82,56 @@ body
   &__text
     line-height: 22px
     text-align: center
+.timeline
+  &__block
+    display: flex
+    justify-content: space-between
+    max-width: 80%
+    min-height: 80px
+    margin: 15px auto 0
+    & button
+      position: absolute
+      top: 0
+      width: 30px
+      height: 100%
+      background: transparent
+      border: none
+      cursor: pointer
+      &.slick-next
+        right: -30px
+        background: url(../img/next.png) center center no-repeat
+      &.slick-prev
+        left: -30px
+        background: url(../img/back.png) center center no-repeat
+  &__line
+    width: 100%
+    height: 2px
+    background-color: $date
+  &__year
+    position: relative
+    display: block
+    margin: 20px auto 0
+    width: 50px
+    height: 50px
+    text-align: center
+    line-height: 50px
+    border: 2px solid $date
+    border-radius: 50%
+    transition: all 0.3s ease-in-out
+    &:before
+      border: 7px solid transparent
+      border-bottom: 22px solid $date
+      content: ''
+      position: absolute
+      top: -29px
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+
+.slick-center .timeline__year,
+.timeline__year:hover
+  font-size: 19px
+  width: 55px
+  height: 55px
+  background-color: rgba($text, 0.3)
 /*нстройки описания*/

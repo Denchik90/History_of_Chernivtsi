@@ -4,13 +4,12 @@ html(lang='ru')
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1')
         title История Черновцов
-        //link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
-        link(rel='stylesheet' type='text/css' href='css/slick.css')
+        link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
         link(rel='stylesheet' href='css/main.css')
     body
         mixin item(text)
             li.menu__item
-                a(href='#').menu__link=text
+                a(href='#').menu__link= text
         .wrapper
             header#menu.menu
                 a(href='#').logo
@@ -48,12 +47,16 @@ html(lang='ru')
                                 p.slider__text В 1788 р. влада звільнила власників кам'яних будівель від сплати державного податку на З0 років та міського поземельного податку на 10 років, чим заохотила кам'яне будівництво. В цей час розпочалася забудова Головної вулиці та сучасної Центральної площі кам'яними будинками.
                     .timeline__block
                         .timeline__time
+                            .timeline__line
                             p.timeline__year 1774
                         .timeline__time
+                            .timeline__line
                             p.timeline__year 1780
                         .timeline__time
+                            .timeline__line
                             p.timeline__year 1782
                         .timeline__time
+                            .timeline__line
                             p.timeline__year 1788
 
 include includes/_footer
