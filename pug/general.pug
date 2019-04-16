@@ -1,62 +1,39 @@
-doctype
-html(lang='ru')
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1')
-        title История Черновцов
-        link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
-        link(rel='stylesheet' href='css/main.css')
-    body
-        mixin item(text)
-            li.menu__item
-                a(href='#').menu__link= text
-        .wrapper
-            header#menu.menu
-                a(href='#').logo
-                    img(src='img/logo.png' alt='logo').logo__img
-                nav.menu__block
-                    ul.menu__list
-                        +item('Генеральський будинок')
-                        +item('lorem ipsum')
-                        +item('lorem ipsum')
-                        +item('lorem ipsum')
-                        +item('lorem ipsum')
-                        +item('lorem ipsum')
-            section.content
-                .content__header
-                    h1.content__head Генеральський будинок
-                    p.content__description В 1780 р. на розі сучасних вулиць Шкільної та Шолом-Алейхема було споруджено перший цегляний будинок - "генеральський дім"
-                    small.content__period 1774-1788
-                .slider
-                    .slider__content
-                        .slider__slide
-                            .slider__container
-                                img.slider__img(src='img/general.jpg' alt='Генеральський дім')
-                                p.slider__text В час прилучення Буковини до Австрії (1774 р.) Чернівці нараховували близько 290 будинків, споруджених переважно з дерева, що надавало, за словами К. фон Енценберга, місту нужденного вигляду. З призначенням К. фон Енценберга генерал-губернатором Буковини та початком реформ заохочувалося переселення до краю ремісників та торгівців. Збільшення населення міста спричинило його розширення на південь.
-                        .slider__slide
-                            .slider__container
-                                img.slider__img(src='img/general-old.jpg' alt='Генеральський дім')
-                                p.slider__text Трохи вище "генеральського дому" було споруджено дерев'яну римо-католицьку церкву, у вежі якої встановили перший у місті годинник (1778 р.). Нині тут розташувався сквер.В 1780 р. на розі сучасних вулиць Шкільної та Шолом-Алейхема було споруджено перший цегляний будинок - "генеральський дім", резиденція генерал-губернатора Буковини. Поступово за рахунок прибудов він розширився углиб вул. Шкільної.
-                        .slider__slide
-                            .slider__container
-                                img.slider__img(src='img/general1.jpg' alt='Генеральський дім')
-                                p.slider__text На протилежному боці вул. Головної, біля сучасної кам'яної римо-католицької церкви, розташовується "дім полковників" (казино), споруджений 1782 р., який сучасного вигляду набрав після кількох реставрацій. На вулиці Шкільній, між "генеральським домом" та Турецьким мостом, розташовувався будинок, що його К. фон Енценберг купив для школи, заняття в якій розпочалися 1 березня 1784 р.
-                        .slider__slide
-                            .slider__container
-                                img.slider__img(src='img/general-new.jpg' alt='Генеральський дім')
-                                p.slider__text В 1788 р. влада звільнила власників кам'яних будівель від сплати державного податку на З0 років та міського поземельного податку на 10 років, чим заохотила кам'яне будівництво. В цей час розпочалася забудова Головної вулиці та сучасної Центральної площі кам'яними будинками.
-                    .timeline__block
-                        .timeline__time
-                            .timeline__line
-                            p.timeline__year 1774
-                        .timeline__time
-                            .timeline__line
-                            p.timeline__year 1780
-                        .timeline__time
-                            .timeline__line
-                            p.timeline__year 1782
-                        .timeline__time
-                            .timeline__line
-                            p.timeline__year 1788
-
-include includes/_footer
+extends includes/_header
+block content
+    section.content
+        .content__header
+            h1.content__head Генеральський будинок
+            p.content__description В 1780 р. на розі сучасних вулиць Шкільної та Шолом-Алейхема було споруджено перший цегляний будинок - "генеральський дім"
+            small.content__period 1774-1788
+        .slider
+            .slider__content
+                .slider__slide
+                    .slider__container
+                        img.slider__img(src='img/general.jpg' alt='Генеральський дім')
+                        p.slider__text В час прилучення Буковини до Австрії (1774 р.) Чернівці нараховували близько 290 будинків, споруджених переважно з дерева, що надавало, за словами К. фон Енценберга, місту нужденного вигляду. З призначенням К. фон Енценберга генерал-губернатором Буковини та початком реформ заохочувалося переселення до краю ремісників та торгівців. Збільшення населення міста спричинило його розширення на південь.
+                .slider__slide
+                    .slider__container
+                        img.slider__img(src='img/general-old.jpg' alt='Генеральський дім')
+                        p.slider__text Трохи вище "генеральського дому" було споруджено дерев'яну римо-католицьку церкву, у вежі якої встановили перший у місті годинник (1778 р.). Нині тут розташувався сквер.В 1780 р. на розі сучасних вулиць Шкільної та Шолом-Алейхема було споруджено перший цегляний будинок - "генеральський дім", резиденція генерал-губернатора Буковини. Поступово за рахунок прибудов він розширився углиб вул. Шкільної.
+                .slider__slide
+                    .slider__container
+                        img.slider__img(src='img/general1.jpg' alt='Генеральський дім')
+                        p.slider__text На протилежному боці вул. Головної, біля сучасної кам'яної римо-католицької церкви, розташовується "дім полковників" (казино), споруджений 1782 р., який сучасного вигляду набрав після кількох реставрацій. На вулиці Шкільній, між "генеральським домом" та Турецьким мостом, розташовувався будинок, що його К. фон Енценберг купив для школи, заняття в якій розпочалися 1 березня 1784 р.
+                .slider__slide
+                    .slider__container
+                        img.slider__img(src='img/general-new.jpg' alt='Генеральський дім')
+                        p.slider__text В 1788 р. влада звільнила власників кам'яних будівель від сплати державного податку на З0 років та міського поземельного податку на 10 років, чим заохотила кам'яне будівництво. В цей час розпочалася забудова Головної вулиці та сучасної Центральної площі кам'яними будинками.
+            .timeline__block
+                .timeline__time
+                    .timeline__line
+                    p.timeline__year 1774
+                .timeline__time
+                    .timeline__line
+                    p.timeline__year 1780
+                .timeline__time
+                    .timeline__line
+                    p.timeline__year 1782
+                .timeline__time
+                    .timeline__line
+                    p.timeline__year 1788
+    include includes/_footer

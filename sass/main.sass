@@ -52,15 +52,27 @@ body
     &:hover
       background-color: $text
       color: $primary
-/*нстройки сайтбара*/
+/*нстройки контента*/
 .content
   width: 80%
+  overflow: auto
   &__header
     border-bottom: 1px solid $text
     padding: 15px
   &__head
     font-size: 29px
     line-height: 36px
+  &__main
+    padding: 20px
+  &__img
+    width: 350px
+    float: left
+    margin: 0 20px 20px 0
+    border-radius: 5px
+  &__history
+    margin-bottom: 20px
+  &__title
+    margin-bottom: 20px
   &__description
     font-size: 16px
     margin: 10px
@@ -69,7 +81,7 @@ body
     margin-right: 15px
     color: $date
     border-bottom: 1px solid $date
-/*нстройки сайтбара*/
+/*нстройки контента*/
 /*нстройки описания*/
 .slider
   padding-top: 30px
