@@ -16,26 +16,77 @@ body
 /*базовые настройки*/
 /*нстройки сайтбара*/
 .wrapper
+  position: relative
   display: flex
   background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,0.8)), url(../img/1.jpg) center center no-repeat
   -webkit-background-size: cover
   background-size: cover
-  width: 100vw
+  //width: 100vw
   height: 100vh
+  perspective: 1000px
+.container
+  max-width: 1200px
+  width: 90%
+  margin: 0 auto
 
 .logo
   display: block
   width: 70px
-  margin: 15px 15px 15px auto
+  margin: 15px 0 0 20px
   &__img
     width: 100%
 .menu
-  width: 20%
+  position: fixed
+  top: 0
+  left: 0
+  width: 300px
   height: 100vh
   background-color: $primary
   box-shadow: 0 0 15px 0 rgba($primary, 0.5)
-  overflow: auto
   z-index: 999
+  transition: all 0.3s ease-in-out
+  transform: translateX(-300px)
+  &__btn
+    position: absolute
+    top: 15px
+    right: -40px
+    width: 40px
+    height: 40px
+    background-color: $primary
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid $text
+    border-left: none
+    cursor: pointer
+    &-close,
+    &-close:after,
+    &-close:before
+      width: 20px
+      height: 2px
+      display: block
+      background-color: $text
+      transition: all 0.3s ease-in-out
+      transform-origin: left
+    &-close
+      position: relative
+      &:after,
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+      &:after
+        bottom: -7px
+      &:before
+        top: -7px
+    &:hover &-close,
+    &:hover &-close:after,
+    &:hover &-close:before
+      animation: btn-anim 2s infinite
+  &__wrapper
+    width: 100%
+    height: 100%
+    overflow: auto
   &__block
     width: 100%
   &__list
@@ -52,18 +103,22 @@ body
     &:hover
       background-color: $text
       color: $primary
+  &-active
+    transform: translateX(0)
 /*нстройки контента*/
 .content
-  width: 80%
+  width: 100%
   overflow: auto
+  transform-origin: left
+  transition: all 0.3s ease-in-out
   &__header
     border-bottom: 1px solid $text
-    padding: 15px
+    padding: 15px 0
   &__head
     font-size: 29px
     line-height: 36px
   &__main
-    padding: 20px
+    padding: 20px 0
   &__img
     width: 350px
     float: left
@@ -84,7 +139,14 @@ body
     margin-right: 15px
     color: $date
     border-bottom: 1px solid $date
+  &-active
+    transform: translateX(300px) rotateY(45deg)
 /*нстройки контента*/
+@keyframes btn-anim
+  0%,100%
+    transform: translateX(0)
+  50%
+    transform: translateX(3px)
 /*нстройки описания*/
 .slider
   padding-top: 30px
@@ -121,7 +183,7 @@ body
         background: url(../img/back.png) center center no-repeat
   &__line
     width: 100%
-    height: 2px
+    height: 1px
     background-color: $date
   &__year
     position: relative
@@ -174,5 +236,51 @@ body
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    width: 60%
+    height: 80%
 /*нстройки modal image*/
+/*нстройки Галереи*/
+.galery
+  padding: 40px 0
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+  &__block
+    flex-basis: 50%
+    margin-bottom: 20px
+  &__comparing
+    position: relative
+    overflow: hidden
+    width: 400px
+    height: 200px
+    margin: 0 auto
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+  &__img-first,
+  &__img-second
+    position: absolute
+    width: 100%
+    height: 100%
+    overflow: hidden
+  &__img-second
+    width: 50%
+  & img
+    width: 400px
+  &__info
+    width: 400px
+    padding: 15px
+    margin: 0 auto
+    background-color: rgba(0,0,0, 0.8)
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    display: flex
+    justify-content: space-around
+    align-items: center
+  &__text
+    font-size: 19px
+  &__more
+    margin-left: 40px
+    text-transform: lowercase
+    color: $date
+    font-size: 14px
+
+/*нстройки Галереи*/

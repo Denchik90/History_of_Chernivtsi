@@ -12,15 +12,19 @@ html(lang='ru')
                 a(href= href).menu__link= text
         .wrapper
             header#menu.menu
-                a(href='#').logo
-                    img(src='img/logo.png' alt='logo').logo__img
-                nav.menu__block
-                    ul.menu__list
-                        +item('Головна', 'index.html')
-                        +item('Генеральський будинок', '/general.html')
-                        +item('lorem ipsum','#')
-                        +item('lorem ipsum','#')
-                        +item('lorem ipsum','#')
-                        +item('lorem ipsum','#')
-                        +item('lorem ipsum','#')
+                .menu__btn
+                    span.menu__btn-close
+                .menu__wrapper
+                    a(href='#').logo
+                        img(src='img/logo.png' alt='logo').logo__img
+                    nav.menu__block
+                        ul.menu__list
+                            +item('Головна', 'index.html')
+                            +item('Галерея','galery.html')
+                            +item('Генеральський будинок', '/general.html')
+                            +item('lorem ipsum','#')
+                            +item('lorem ipsum','#')
+                            +item('lorem ipsum','#')
+                            +item('lorem ipsum','#')
+                            +item('lorem ipsum','#')
             block content

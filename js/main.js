@@ -27,5 +27,14 @@ $(document).ready(function () {
     });
     $('.modal span').bind('click',function () {
         $('.modal').fadeOut()
-    })
+    });
+    $('.menu__btn').bind('click',function () {
+        $('#menu').toggleClass('menu-active');
+        $('.content').toggleClass('content-active');
+    });
+    $('.galery__comparing').mousemove(function (e) {
+        let x = e.offsetX;
+        console.log(x);
+        $(this).children('.galery__img-second').css('width', x + 'px' );
+    });
 });
