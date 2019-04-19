@@ -154,6 +154,7 @@ body
   &__history
     margin-bottom: 20px
     padding: 0 20px
+    text-align: justify
   &__title
     margin-bottom: 20px
   &__description
@@ -166,6 +167,14 @@ body
     border-bottom: 1px solid $date
   &-active
     transform: translateX(300px) rotateY(45deg)
+/*нстройки адаптив контента*/
+@media (max-width: 600px)
+  .content
+    &__img
+      width: 100%
+      margin: 0
+      margin-bottom: 10px
+/*нстройки адаптив контента*/
 /*нстройки контента*/
 @keyframes btn-anim
   0%,100%
@@ -174,7 +183,7 @@ body
     transform: translateX(3px)
 /*нстройки описания*/
 .slider
-  padding-top: 30px
+  padding: 30px 0
   &__container
     width: 70%
     margin: 0 auto
@@ -183,7 +192,7 @@ body
     margin: 0 auto 15px
   &__text
     line-height: 22px
-    text-align: center
+    text-align: justify
 .timeline
   &__block
     display: flex
@@ -277,13 +286,13 @@ body
     display: flex
     flex-wrap: wrap
   &__block
-    flex-basis: 50%
+    flex-basis: 33.3%
     margin-bottom: 20px
   &__comparing
     position: relative
     overflow: hidden
-    width: 400px
-    height: 200px
+    width: 320px
+    height: 180px
     margin: 0 auto
     border-top-left-radius: 5px
     border-top-right-radius: 5px
@@ -296,9 +305,9 @@ body
   &__img-second
     width: 50%
   & img
-    width: 400px
+    width: 320px
   &__info
-    width: 400px
+    width: 320px
     padding: 15px
     margin: 0 auto
     background-color: rgba(0,0,0, 0.8)
@@ -315,7 +324,11 @@ body
     color: $date
     font-size: 14px
 /*нстройки адаптив Галереи*/
-@media (max-width: 1000px)
+@media (max-width: 1160px)
+  .galery
+    &__block
+      flex-basis: 50%
+@media (max-width: 770px)
   .galery
     &__block
       flex-basis: 100%
