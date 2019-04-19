@@ -21,9 +21,9 @@ body
   background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,0.8)), url(../img/1.jpg) center center no-repeat
   -webkit-background-size: cover
   background-size: cover
-  //width: 100vw
   height: 100vh
   perspective: 1000px
+  overflow-x: hidden
 .container
   max-width: 1200px
   width: 90%
@@ -76,13 +76,23 @@ body
         position: absolute
         left: 0
       &:after
-        bottom: -7px
+        bottom: -8px
       &:before
-        top: -7px
+        top: -8px
     &:hover &-close,
     &:hover &-close:after,
     &:hover &-close:before
       animation: btn-anim 2s infinite
+    &-active
+      right: 0
+      border: none
+      transition: all 0.3s ease-in-out
+    &-active .menu__btn-close
+      height: 0
+    &-active .menu__btn-close:after
+      transform: rotate(-45deg)
+    &-active .menu__btn-close:before
+      transform: rotate(45deg)
   &__wrapper
     width: 100%
     height: 100%
@@ -105,6 +115,21 @@ body
       color: $primary
   &-active
     transform: translateX(0)
+/*нстройки адаптив сайтбара*/
+@media (max-width: 600px)
+  .menu
+    width: 100%
+    transform: translateX(-100%)
+    text-align: center
+    &-active
+      transform: translateX(0%)
+    &__btn
+      &:hover &-close,
+      &:hover &-close:after,
+      &:hover &-close:before
+        animation: none
+/*нстройки адаптив сайтбара*/
+/*нстройки сайтбара*/
 /*нстройки контента*/
 .content
   width: 100%
@@ -141,6 +166,12 @@ body
     border-bottom: 1px solid $date
   &-active
     transform: translateX(300px) rotateY(45deg)
+/*нстройки адаптив сайтбара*/
+@media (max-width: 600px)
+  .content
+    &-active
+
+/*нстройки адаптив сайтбара*/
 /*нстройки контента*/
 @keyframes btn-anim
   0%,100%
@@ -282,5 +313,10 @@ body
     text-transform: lowercase
     color: $date
     font-size: 14px
-
+/*нстройки адаптив Галереи*/
+@media (max-width: 1000px)
+  .galery
+    &__block
+      flex-basis: 100%
+/*нстройки адаптив Галереи*/
 /*нстройки Галереи*/

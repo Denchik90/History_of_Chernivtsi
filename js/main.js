@@ -37,4 +37,12 @@ $(document).ready(function () {
         console.log(x);
         $(this).children('.galery__img-second').css('width', x + 'px' );
     });
+    $(window).resize(function () {
+       let width = $(window).width();
+       if (width < 600){
+           $('.menu__btn').bind('click',function () {
+                $(this).toggleClass('menu__btn-active')
+           });
+       }
+    });
 });
